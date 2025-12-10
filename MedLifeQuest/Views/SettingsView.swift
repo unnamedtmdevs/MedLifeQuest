@@ -105,26 +105,6 @@ struct SettingsView: View {
                                     title: "Version",
                                     value: "1.0.0"
                                 ) {}
-                                
-                                Divider()
-                                    .background(Color.white.opacity(0.2))
-                                    .padding(.leading, 60)
-                                
-                                SettingsRow(
-                                    icon: "doc.text.fill",
-                                    title: "Privacy Policy",
-                                    showChevron: true
-                                ) {}
-                                
-                                Divider()
-                                    .background(Color.white.opacity(0.2))
-                                    .padding(.leading, 60)
-                                
-                                SettingsRow(
-                                    icon: "checkmark.shield.fill",
-                                    title: "Terms of Service",
-                                    showChevron: true
-                                ) {}
                             }
                             .background(Color.white.opacity(0.1))
                             .cornerRadius(16)
