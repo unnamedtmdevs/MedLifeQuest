@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MedLifeQuestApp: App {
+    @StateObject private var userStateService = UserStateService()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LauncherView()
+                .environmentObject(userStateService)
         }
     }
 }

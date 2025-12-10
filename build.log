@@ -1,0 +1,64 @@
+2025-12-10 20:01:30.288 xcodebuild[7118:12089406]  DVTFilePathFSEvents: Failed to start fs event stream.
+2025-12-10 20:01:30.523 xcodebuild[7118:12089402] [MT] DVTDeveloperPaths: Failed to get length of DARWIN_USER_CACHE_DIR from confstr(3), error = Error Domain=NSPOSIXErrorDomain Code=5 "Input/output error". Using NSCachesDirectory instead.
+2025-12-10 20:01:30.943 xcodebuild[7118:12089405] CoreSimulatorService connection became invalid.  Simulator services will no longer be available.
+2025-12-10 20:01:30.943 xcodebuild[7118:12089444] Logging connecton invalid: <OS_xpc_error: <dictionary: 0x205802bf0> { count = 1, transaction: 0, voucher = 0x0, contents =
+	"XPCErrorDescription" => <string: 0x205802d38> { length = 18, contents = "Connection invalid" }
+}>
+2025-12-10 20:01:30.943 xcodebuild[7118:12089443] Error opening log file (/Users/simonbakhanets/Library/Logs/CoreSimulator/CoreSimulator.com.apple.dt.xcodebuild.log): Operation not permitted
+[-[SimServiceContext sendRequest:]:1867] ERROR : Unable to deliver request ({
+    "developer_dir" = "/Applications/Xcode.app/Contents/Developer";
+    request = "set_developer_dir";
+}) because we are not connected to CoreSimulatorService.
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild clean build -scheme MedLifeQuest -destination "platform=iOS Simulator,name=iPhone 15,OS=17.5"
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+
+2025-12-10 20:01:30.990 xcodebuild[7118:12089402] [MT] DVTAssertions: Warning in DVTFrameworks/DVTFoundation/FileTypes/DVTFileDataTypeDetection.m:75
+Details:  detectedTypeIdentifier (com.apple.xml-property-list) does not conform to matchedTypeIdentifier in MagicFileDataTypeDetector extenson com.apple.property-list.  When both are specified, this conformance is required. extension.identifier:Xcode.MagicFileDataTypeDetector.XMLPlist
+Object:   <DVTFileDataTypeDetectionMagicCache: 0x1177295d0>
+Method:   -initWithExtension:
+Thread:   <_NSMainThread: 0x1446112c0>{number = 1, name = main}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+2025-12-10 20:01:30.992 xcodebuild[7118:12089402] [MT] DVTAssertions: Warning in DVTFrameworks/DVTFoundation/FileTypes/DVTFileDataTypeDetection.m:75
+Details:  detectedTypeIdentifier (com.apple.binary-property-list) does not conform to matchedTypeIdentifier in MagicFileDataTypeDetector extenson com.apple.property-list.  When both are specified, this conformance is required. extension.identifier:Xcode.MagicFileDataTypeDetector.BinaryPlist
+Object:   <DVTFileDataTypeDetectionMagicCache: 0x1154d8b60>
+Method:   -initWithExtension:
+Thread:   <_NSMainThread: 0x1446112c0>{number = 1, name = main}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+2025-12-10 20:01:31.055 xcodebuild[7118:12089451]  DVTProvisioningProfileManager: Failed to load profile "/Users/simonbakhanets/Library/Developer/Xcode/UserData/Provisioning Profiles/9b052b1b-7ec3-4f7f-af66-bc365acf2c02.mobileprovision" (Error Domain=DVTProvisioningProfileProviderErrorDomain Code=1 "Failed to load profile." UserInfo={NSLocalizedDescription=Failed to load profile., NSLocalizedRecoverySuggestion=Profile is missing the required UUID property.})
+2025-12-10 20:01:31.055 xcodebuild[7118:12089452]  DVTProvisioningProfileManager: Failed to load profile "/Users/simonbakhanets/Library/Developer/Xcode/UserData/Provisioning Profiles/9874593e-3d26-48cc-a540-e6ba09890024.mobileprovision" (Error Domain=DVTProvisioningProfileProviderErrorDomain Code=1 "Failed to load profile." UserInfo={NSLocalizedDescription=Failed to load profile., NSLocalizedRecoverySuggestion=Profile is missing the required UUID property.})
+2025-12-10 20:01:31.055 xcodebuild[7118:12089445]  DVTProvisioningProfileManager: Failed to load profile "/Users/simonbakhanets/Library/Developer/Xcode/UserData/Provisioning Profiles/096cd5bc-a81a-4b4e-b207-4ed7ca4d7978.mobileprovision" (Error Domain=DVTProvisioningProfileProviderErrorDomain Code=1 "Failed to load profile." UserInfo={NSLocalizedDescription=Failed to load profile., NSLocalizedRecoverySuggestion=Profile is missing the required UUID property.})
+2025-12-10 20:01:31.055 xcodebuild[7118:12089450]  DVTProvisioningProfileManager: Failed to load profile "/Users/simonbakhanets/Library/Developer/Xcode/UserData/Provisioning Profiles/2295dda8-00b8-4711-98ea-fbdd94138282.mobileprovision" (Error Domain=DVTProvisioningProfileProviderErrorDomain Code=1 "Failed to load profile." UserInfo={NSLocalizedDescription=Failed to load profile., NSLocalizedRecoverySuggestion=Profile is missing the required UUID property.})
+[-[SimServiceContext initWithDeveloperDir:connectionType:error:]:497] WARN  : Unable to discover any Simulator runtimes. Developer Directory is /Applications/Xcode.app/Contents/Developer.
+[-[SimDiskImageManager init]:147] ERROR : Could not kickstart simdiskimaged; SimDiskImageManager services will not be available: Error Domain=NSPOSIXErrorDomain Code=53 "Software caused connection abort" UserInfo={NSLocalizedDescription=Error returned in reply from CoreSimulatorService: Connection invalid}
+[-[SimDiskImageManager _onQueue_checkConnection:]:210] ERROR : simdiskimaged returned error (invalid), marking disconnected.
+[-[SimServiceContext initWithDeveloperDir:connectionType:error:]_block_invoke:533] ERROR : Could not get list of trusted mount directories: Error Domain=com.apple.CoreSimulator.SimError Code=410 "The service used to manage runtime disk images (simdiskimaged) crashed or is not responding" UserInfo={NSLocalizedDescription=The service used to manage runtime disk images (simdiskimaged) crashed or is not responding}
+[-[SimDiskImageManager _onQueue_checkConnection:]:210] ERROR : simdiskimaged returned error (invalid), marking disconnected.
+[-[SimServiceContext sendRequest:reply:error:]:1887] ERROR : Unable to deliver request ({
+    request = "notification_subscription";
+    "set_path" = "/Users/simonbakhanets/Library/Developer/CoreSimulator/Devices";
+}) because we are not connected to CoreSimulatorService.
+2025-12-10 20:01:31.196 xcodebuild[7118:12089444] Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedDescription=CoreSimulatorService connection became invalid.  Simulator services will no longer be available.}
+2025-12-10 20:01:31.198 xcodebuild[7118:12089444]  iOSSimulator: [SimServiceContext defaultDeviceSetWithError:] returned nil (Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedFailureReason=Failed to subscribe to notifications from CoreSimulatorService., NSLocalizedDescription=Failed to initialize simulator device set., NSUnderlyingError=0x11a6d4510 {Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedDescription=CoreSimulatorService connection became invalid.  Simulator services will no longer be available.}}}). Simulator device support disabled.
+[-[SimServiceContext sendRequest:reply:error:]:1887] ERROR : Unable to deliver request ({
+    request = "notification_subscription";
+    "set_path" = "/Users/simonbakhanets/Library/Developer/CoreSimulator/Devices";
+}) because we are not connected to CoreSimulatorService.
+2025-12-10 20:01:31.198 xcodebuild[7118:12089406] Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedDescription=CoreSimulatorService connection became invalid.  Simulator services will no longer be available.}
+2025-12-10 20:01:31.198 xcodebuild[7118:12089406]  IDESimulatorAvailability: startObservingSimulatorUpdates() FAILED to register SimDeviceSet observer
+2025-12-10 20:02:01.362 xcodebuild[7118:12089402] Writing error result bundle to /var/folders/4s/hzln87g944z52767q919q_6c0000gn/T/ResultBundle_2025-10-12_20-02-0001.xcresult
+xcodebuild: error: Unable to find a device matching the provided destination specifier:
+		{ platform:iOS Simulator, OS:17.5, name:iPhone 15 }
+
+	The requested device could not be found because no available devices matched the request.
+
+	Available destinations for the "MedLifeQuest" scheme:
+		{ platform:macOS, arch:arm64, id:00008103-001925901A39001E, name:My Mac }
+		{ platform:macOS, arch:x86_64, id:00008103-001925901A39001E, name:My Mac }
+		{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+		{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+		{ platform:macOS, name:Any Mac }
+		{ platform:visionOS, id:dvtdevice-DVTiOSDevicePlaceholder-xros:placeholder, name:Any visionOS Device }
+		{ platform:visionOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-xrsimulator:placeholder, name:Any visionOS Simulator Device }
