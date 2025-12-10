@@ -1,6 +1,6 @@
 //
 //  LauncherView.swift
-//  MedLifeQuest
+//  X-MedLifeQuest
 //
 //  Created on Dec 10, 2025.
 //
@@ -35,7 +35,7 @@ struct LauncherView: View {
                 
                 if isBlock == true {
                     
-                    // Наше обычное приложение MedLifeQuest
+                    // Наше обычное приложение X-MedLifeQuest
                     if userStateService.hasCompletedOnboarding {
                         MainAppView()
                             .environmentObject(userStateService)

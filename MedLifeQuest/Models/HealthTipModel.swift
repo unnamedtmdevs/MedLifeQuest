@@ -1,6 +1,6 @@
 //
 //  HealthTipModel.swift
-//  MedLifeQuest
+//  X-MedLifeQuest
 //
 //  Created on Dec 10, 2025.
 //

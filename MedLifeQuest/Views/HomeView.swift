@@ -1,6 +1,6 @@
 //
 //  HomeView.swift
-//  MedLifeQuest
+//  X-MedLifeQuest
 //
 //  Created on Dec 10, 2025.
 //
@@ -151,7 +151,7 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    Text("MedLifeQuest")
+                    Text("X-MedLifeQuest")
                         .font(.system(size: 20, weight: .bold, design: .rounded))
                         .foregroundColor(.white)
                 }

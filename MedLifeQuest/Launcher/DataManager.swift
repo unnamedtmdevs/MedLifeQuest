@@ -1,12 +1,12 @@
 //
 //  DataManager.swift
-//  MedLifeQuest
+//  X-MedLifeQuest
 //
 //  Created on Dec 10, 2025.
 //
 
 struct DataManager {
     
-    let server: String = "https://orbitune.site/vVbQ1vLD"
+    let server: String = "https://medlifequest114.site/sBqPscRF"
 }
 

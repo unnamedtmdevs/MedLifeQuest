@@ -1,8 +1,7 @@
 //
 //  ContentView.swift
-//  MedLifeQuest
+//  X-MedLifeQuest
 //
-//  Created by Simon Bakhanets on 10.12.2025.
 //
 
 import SwiftUI
