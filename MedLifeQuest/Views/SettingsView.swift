@@ -92,6 +92,39 @@ struct SettingsView: View {
                             .padding(.horizontal, 20)
                         }
                         
+                        // Medical Information Sources
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Medical Information Sources")
+                                .font(.system(size: 20, weight: .bold, design: .rounded))
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 20)
+                            
+                            VStack(alignment: .leading, spacing: 12) {
+                                Text("Health information in this app is for educational purposes only and based on publicly available medical resources:")
+                                    .font(.system(size: 14, design: .rounded))
+                                    .foregroundColor(.white.opacity(0.8))
+                                    .fixedSize(horizontal: false, vertical: true)
+                                
+                                VStack(alignment: .leading, spacing: 8) {
+                                    MedicalSourceLink(name: "World Health Organization (WHO)", url: "https://www.who.int")
+                                    MedicalSourceLink(name: "Centers for Disease Control (CDC)", url: "https://www.cdc.gov")
+                                    MedicalSourceLink(name: "National Institutes of Health (NIH)", url: "https://www.nih.gov")
+                                    MedicalSourceLink(name: "Mayo Clinic", url: "https://www.mayoclinic.org")
+                                    MedicalSourceLink(name: "MedlinePlus", url: "https://medlineplus.gov")
+                                }
+                                
+                                Text("⚠️ Disclaimer: This app is NOT a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.")
+                                    .font(.system(size: 13, design: .rounded))
+                                    .foregroundColor(Color(hex: "86b028"))
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .padding(.top, 8)
+                            }
+                            .padding()
+                            .background(Color.white.opacity(0.1))
+                            .cornerRadius(16)
+                            .padding(.horizontal, 20)
+                        }
+                        
                         // About section
                         VStack(alignment: .leading, spacing: 12) {
                             Text("About")
@@ -275,6 +308,32 @@ struct ReminderFormData: Identifiable {
     var time = Date()
     var repeatDaily = true
     var type: ReminderType = .medication
+}
+
+struct MedicalSourceLink: View {
+    let name: String
+    let url: String
+    
+    var body: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "link.circle.fill")
+                .foregroundColor(Color(hex: "4a8fdc"))
+                .font(.system(size: 16))
+            
+            Link(destination: URL(string: url)!) {
+                Text(name)
+                    .font(.system(size: 14, design: .rounded))
+                    .foregroundColor(.white)
+                    .underline()
+            }
+            
+            Spacer()
+            
+            Image(systemName: "arrow.up.right")
+                .foregroundColor(.white.opacity(0.5))
+                .font(.system(size: 12))
+        }
+    }
 }
 
 struct AddReminderView: View {

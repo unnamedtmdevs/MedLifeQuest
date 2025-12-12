@@ -4,6 +4,16 @@
 //
 //  Created on Dec 10, 2025.
 //
+//  DISCLAIMER: All health information in this service is for educational purposes only
+//  and based on publicly available medical resources including:
+//  - World Health Organization (WHO): https://www.who.int
+//  - Centers for Disease Control (CDC): https://www.cdc.gov
+//  - National Institutes of Health (NIH): https://www.nih.gov
+//  - Mayo Clinic: https://www.mayoclinic.org
+//  - MedlinePlus: https://medlineplus.gov
+//
+//  This information is NOT a substitute for professional medical advice.
+//  Always consult a healthcare provider for medical concerns.
 
 import Foundation
 
@@ -31,27 +41,31 @@ class HealthDataService {
         return Array(relevantTips.shuffled().prefix(3))
     }
     
+    // General health information based on publicly available medical resources
+    // Sources: WHO, CDC, NIH, Mayo Clinic, MedlinePlus
     func getAdviceForSymptom(_ symptom: Symptom) -> String {
         switch symptom.category {
         case .headache:
-            return "Stay hydrated and rest in a quiet, dark room. If headaches persist or worsen, consult a healthcare provider."
+            return "General wellness suggestion: Stay hydrated and rest in a quiet, dark room. If headaches persist or worsen, consult a healthcare provider."
         case .fatigue:
-            return "Ensure you're getting 7-9 hours of quality sleep. Regular exercise and a balanced diet can help improve energy levels."
+            return "General wellness suggestion: Ensure you're getting 7-9 hours of quality sleep. Regular exercise and a balanced diet can help improve energy levels."
         case .digestive:
-            return "Eat smaller, more frequent meals. Avoid spicy or fatty foods. Stay hydrated and consider probiotic-rich foods."
+            return "General wellness suggestion: Eat smaller, more frequent meals. Avoid spicy or fatty foods. Stay hydrated and consider probiotic-rich foods."
         case .respiratory:
-            return "Stay hydrated, use a humidifier, and rest. If breathing difficulties persist or worsen, seek medical attention immediately."
+            return "General wellness suggestion: Stay hydrated, use a humidifier, and rest. If breathing difficulties persist or worsen, seek medical attention immediately."
         case .musculoskeletal:
-            return "Apply ice for acute pain or heat for chronic pain. Gentle stretching and proper posture can help. Consider physical therapy if pain persists."
+            return "General wellness suggestion: Apply ice for acute pain or heat for chronic pain. Gentle stretching and proper posture can help. Consider physical therapy if pain persists."
         case .skin:
-            return "Keep the area clean and moisturized. Avoid irritants and allergens. If symptoms persist or worsen, consult a dermatologist."
+            return "General wellness suggestion: Keep the area clean and moisturized. Avoid irritants and allergens. If symptoms persist or worsen, consult a dermatologist."
         case .mental:
-            return "Practice stress-reduction techniques like meditation or deep breathing. Regular exercise and adequate sleep are important. Consider speaking with a mental health professional."
+            return "General wellness suggestion: Practice stress-reduction techniques like meditation or deep breathing. Regular exercise and adequate sleep are important. Consider speaking with a mental health professional."
         case .other:
-            return "Monitor your symptoms carefully. Keep a symptom diary to track patterns. Consult a healthcare provider if symptoms persist or cause concern."
+            return "General wellness suggestion: Monitor your symptoms carefully. Keep a symptom diary to track patterns. Consult a healthcare provider if symptoms persist or cause concern."
         }
     }
     
+    // Educational health quiz questions based on publicly available medical information
+    // Sources: WHO, CDC, NIH, Mayo Clinic, MedlinePlus
     func getQuizQuestions() -> [QuizQuestion] {
         return [
             QuizQuestion(
@@ -113,6 +127,8 @@ class HealthDataService {
         ]
     }
     
+    // General wellness tips based on publicly available health resources
+    // Sources: WHO, CDC, NIH, Mayo Clinic, MedlinePlus
     private func getAllHealthTips() -> [HealthTip] {
         return [
             HealthTip(

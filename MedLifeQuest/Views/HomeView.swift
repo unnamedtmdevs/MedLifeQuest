@@ -87,16 +87,22 @@ struct HomeView: View {
                         
                         // Health tips section
                         VStack(alignment: .leading, spacing: 12) {
-                            HStack {
-                                Text("Health Tips for You")
-                                    .font(.system(size: 22, weight: .bold, design: .rounded))
-                                    .foregroundColor(.white)
+                            VStack(alignment: .leading, spacing: 4) {
+                                HStack {
+                                    Text("Health Tips for You")
+                                        .font(.system(size: 22, weight: .bold, design: .rounded))
+                                        .foregroundColor(.white)
+                                    
+                                    Spacer()
+                                    
+                                    Image(systemName: "lightbulb.fill")
+                                        .foregroundColor(Color(hex: "86b028"))
+                                        .font(.system(size: 20))
+                                }
                                 
-                                Spacer()
-                                
-                                Image(systemName: "lightbulb.fill")
-                                    .foregroundColor(Color(hex: "86b028"))
-                                    .font(.system(size: 20))
+                                Text("Educational information only. Not medical advice.")
+                                    .font(.system(size: 12, design: .rounded))
+                                    .foregroundColor(.white.opacity(0.6))
                             }
                             .padding(.horizontal, 20)
                             
@@ -440,7 +446,7 @@ struct SymptomDetailView: View {
                                 Image(systemName: "lightbulb.fill")
                                     .foregroundColor(Color(hex: "86b028"))
                                 
-                                Text("Recommended Advice")
+                                Text("General Health Information")
                                     .font(.system(size: 18, weight: .semibold, design: .rounded))
                                     .foregroundColor(.white)
                             }
@@ -449,6 +455,12 @@ struct SymptomDetailView: View {
                                 .font(.system(size: 16, design: .rounded))
                                 .foregroundColor(.white.opacity(0.85))
                                 .fixedSize(horizontal: false, vertical: true)
+                            
+                            Text("ℹ️ For informational purposes only. Not medical advice. Consult a healthcare professional.")
+                                .font(.system(size: 12, design: .rounded))
+                                .foregroundColor(.white.opacity(0.6))
+                                .fixedSize(horizontal: false, vertical: true)
+                                .padding(.top, 4)
                         }
                         .padding()
                         .background(
@@ -718,13 +730,13 @@ struct QuizResultView: View {
     var resultMessage: String {
         switch percentage {
         case 90...100:
-            return "Excellent! You're a health expert!"
+            return "Excellent! You know your health facts!"
         case 70..<90:
-            return "Great job! You know your health facts!"
+            return "Great job! Keep learning!"
         case 50..<70:
-            return "Good effort! Keep learning!"
+            return "Good effort! Keep practicing!"
         default:
-            return "Keep practicing! Health knowledge is power!"
+            return "Keep learning! Education is power!"
         }
     }
     
